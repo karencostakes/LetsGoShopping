@@ -22,8 +22,8 @@ public class Main {
 		System.out.println(
 				"Would you like to take a look at our vast selection aimed to assist any DevelopHers feeling a bit imposteryish? (Please enter 'heck yes')");
 		choice = scan1.nextLine();
-		// ArrayList <Product> itemList = new ArrayList ();
-		// itemList.add(new Product ("a", "Antonella", "1,000,000"));
+		 // ArrayList <Product> itemList = new ArrayList ();
+		//  itemList.add(new Product ("a", "Antonella", 10,00,000));
 		// itemList.add (new Product ("b", "", ""));
 		// itemList.add (new Product ("c","", ""));
 		// itemList.add (new Product ("d", "", ""));
