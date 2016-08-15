@@ -15,6 +15,7 @@ public class Main {
 		
 		ProductMenuTextFile pmt = new ProductMenuTextFile ();
 		pmt.writeToFile(myConfigFile);
+		
 		pmt.readFile(myConfigFile);
 	}
 
