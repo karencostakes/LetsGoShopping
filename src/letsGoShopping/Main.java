@@ -16,6 +16,7 @@ public class Main {
 		File myConfigFile = filePath.toFile();
 		ProductMenuTextFile pmt = new ProductMenuTextFile();
 		pmt.writeToFile(myConfigFile);
+
 		System.out.println("Welcome to the Ultimate Java Collection!");
 		System.out.println(
 				"Would you like to take a look at our vast selection aimed to assist any DevelopHers feeling a bit imposteryish? (Please enter 'heck yes')");
@@ -35,6 +36,9 @@ public class Main {
 		while (choice.equalsIgnoreCase("heck yes")) {
 
 			pmt.readFile(myConfigFile);
+
+		
+	
 
 			System.out.println(
 					"Please enter the product you want to purchase (enter the letter that corresponds to the product you are interested in:)");

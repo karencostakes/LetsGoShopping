@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class ProductMenuTextFile {
 	
-	
+	// testing push this file from eclipse
 	public static void readFile(File myConfigFile) {
 		try {
 			FileReader reader = new FileReader(myConfigFile);
