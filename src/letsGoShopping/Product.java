@@ -12,13 +12,26 @@ public class Product {
 	private int storeQuantity;
 	private double price;
 
-	public Product(String itemAlpha, String item, double price) {
+	public Product(String itemAlpha, String item, double price,int storeQuantity) {
 		setItemAlpha(itemAlpha);
 		setItem(item);
 		setPrice(price);
-
+        setStoreQuantity(storeQuantity);
 	}
-
+	double lineTotal=0;
+	public double lineTotal(int input){
+		
+		if (input <=storeQuantity)
+			 lineTotal =price*input;
+		return lineTotal;
+	}
+	
+	public double subTotal(){
+		double sum = 0;
+		sum = sum+lineTotal;
+		return sum;
+	}
+	
 	public String getItemAlpha() {
 		return itemAlpha;
 	}
