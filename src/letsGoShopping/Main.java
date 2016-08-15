@@ -22,29 +22,41 @@ public class Main {
 		System.out.println(
 				"Would you like to take a look at our vast selection aimed to assist any DevelopHers feeling a bit imposteryish? (Please enter 'heck yes')");
 		choice = scan1.nextLine();
-		// ArrayList <Product> itemList = new ArrayList ();
-		// itemList.add(new Product ("a", "Antonella", "1,000,000"));
-		// itemList.add (new Product ("b", "", ""));
-		// itemList.add (new Product ("c","", ""));
-		// itemList.add (new Product ("d", "", ""));
-		// itemList.add (new Product ("e", "", ""));
-		// itemList.add (new Product ("f", "", ""));
-		// itemList.add (new Product ("g", ""));
-		// itemList.add (new Product ("h", ""));
-		// itemList.add (new Product ("i", ""));
-		// itemList.add (new Product ("j", ""));
+		ArrayList <Product> itemList = new ArrayList ();
+		itemList.add(new Product ("a", "Antonella", 1000000));
+		itemList.add (new Product ("b", "Kamel Super Constructor", 500000 ));
+		// itemList.add (new Product ("c","", ));
+		// itemList.add (new Product ("d", "", ));
+		// itemList.add (new Product ("e", "", ));
+		// itemList.add (new Product ("f", "",));
+		// itemList.add (new Product ("g", ));
+		// itemList.add (new Product ("h", ));
+		// itemList.add (new Product ("i", ));
+		// itemList.add (new Product ("j", ));
 
 		while (choice.equalsIgnoreCase("heck yes")) {
 
 			pmt.readFile(myConfigFile);
 
 		
-	
 
 			System.out.println(
 					"Please enter the product you want to purchase (enter the letter that corresponds to the product you are interested in:)");
 			String userSelection = scan1.nextLine();
+			for (int i = 0; i < itemList.size(); i++)
+			{
+				if (userSelection.equalsIgnoreCase(itemList.get(i).getItemAlpha()))
+						{
+							System.out.println(itemList.get(i).getPrice());
+					
+						}
+			System.out.println("How many " + itemList.get(i).getItem() + " would you like?");	
+			int userQuantity = scan1.nextInt();
+			scan1.nextLine();
 			
+			
+			}
+				
 			
 
 			choice = "heck no";
