@@ -84,6 +84,25 @@ public class Main {
 		double grandTotal = subTotal + salesTaxAmount;
 		System.out.println("Tax: " + salesTaxAmount);
 		System.out.println("Your Grand Total: " + grandTotal);
+		
+		System.out.println("How would you like to pay? (Cash/check/credit card):");
+		String paymentInfo = scan1.nextLine();
+		if (paymentInfo.equalsIgnoreCase("cash")){
+			System.out.println("Please enter the amount you are paying : ");
+			double payment=scan1.nextInt();
+			              scan1.nextLine();
+			   if (payment>grandTotal){
+				   double change = payment-grandTotal;
+				   System.out.println("Thanks for your purchase here is your change: "+ change);
+			   }
+			   else if(payment<grandTotal){
+				   double stillOwe= grandTotal-payment;
+				   System.out.println("Nice try, buddy!! you still owe: "+ stillOwe);
+			   }
+			   else{
+				   System.out.println("Thank you for shopping. Please tell your java friends about us.");
+			   }
+		}
 
 	}
 
@@ -98,5 +117,6 @@ public class Main {
 		return sum;
 
 	}
+	
 
 }
