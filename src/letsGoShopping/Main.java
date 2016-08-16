@@ -12,6 +12,8 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner scan1 = new Scanner(System.in);
 		String choice;
+		int input = 0;
+		String item = "";
 		Path filePath = Paths.get("productMenu.txt");
 
 		File myConfigFile = filePath.toFile();
@@ -38,7 +40,6 @@ public class Main {
 		// itemList.add (new Product ("i", ));
 		// itemList.add (new Product ("j", ));
 
-
 		while (choice.equalsIgnoreCase("heck yes")) {
 
 			pmt.readFile(myConfigFile);
@@ -46,8 +47,6 @@ public class Main {
 			System.out.println(
 					"Please enter the product you want to purchase (enter the letter that corresponds to the product you are interested in:)");
 			String userSelection = scan1.nextLine();
-			int input = 0;
-			String item = "";
 
 			for (int i = 0; i < itemList.size(); i++) {
 				if (userSelection.equalsIgnoreCase(itemList.get(i).getItemAlpha())) {
@@ -84,32 +83,31 @@ public class Main {
 		double grandTotal = subTotal + salesTaxAmount;
 		System.out.println("Tax: " + salesTaxAmount);
 		System.out.println("Your Grand Total: " + grandTotal);
-		
+
 		System.out.println("How would you like to pay? (Cash/check/credit card):");
 		String paymentInfo = scan1.nextLine();
-		if (paymentInfo.equalsIgnoreCase("cash")){
+		if (paymentInfo.equalsIgnoreCase("cash")) {
 			System.out.println("Please enter the amount you are paying : ");
-			double payment=scan1.nextDouble();
-			              scan1.nextLine();
-			   if (payment>grandTotal){
-				   double change = payment-grandTotal;
-				   System.out.println("Thanks for your purchase here is your change: "+ change);
-			   }
-			   else if(payment<grandTotal){
-				   double stillOwe= grandTotal-payment;
-				   System.out.println("Nice try, buddy!! you still owe: "+ stillOwe);
-			   }
-			   else{
-				   System.out.println("Thank you for shopping. Please tell your java friends about us.");
-			   }
+			double payment = scan1.nextDouble();
+			scan1.nextLine();
+			if (payment > grandTotal) {
+				double change = payment - grandTotal;
+				System.out.println("Thanks for your purchase here is your change: " + change);
+			} else if (payment < grandTotal) {
+				double stillOwe = grandTotal - payment;
+				System.out.println("Nice try, buddy!! you still owe: " + stillOwe);
+			} else {
+				System.out.println("Thank you for shopping. Please tell your java friends about us.");
+			}
 		}
-		if(paymentInfo.equalsIgnoreCase("check")){
-			System.out.println("Please write a check for the amount of : "+ grandTotal + " Please enter your check number :");
-			long checkNumber =scan1.nextLong();
-			               scan1.nextLine();
+		if (paymentInfo.equalsIgnoreCase("check")) {
+			System.out.println(
+					"Please write a check for the amount of : " + grandTotal + " Please enter your check number :");
+			long checkNumber = scan1.nextLong();
+			scan1.nextLine();
 			System.out.println("Thank you for shopping. Please tell your java friends about us.");
 		}
-		if(paymentInfo.equalsIgnoreCase("credit card")){
+		if (paymentInfo.equalsIgnoreCase("credit card")) {
 			System.out.print("Please enter your credit card number: ");
 			String ccNumber = scan1.nextLine();
 			System.out.print("Please enter your expiration date :(MM/YY)");
@@ -118,8 +116,10 @@ public class Main {
 			short cvvNumber = scan1.nextShort();
 			scan1.nextLine();
 			System.out.println("Thank you for shopping. Please tell your java friends about us.");
-		}                   
-
+		}
+		System.out.println("Here is your receipt...");
+		Receipt r = new Receipt(input, item, subTotal, grandTotal, paymentInfo);
+		r.printReceipt();
 	}
 
 	public static double getSubTotal(ArrayList<Product> itemPurchasedList) {
@@ -133,6 +133,5 @@ public class Main {
 		return sum;
 
 	}
-	
 
 }
