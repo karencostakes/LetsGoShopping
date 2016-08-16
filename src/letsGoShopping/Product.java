@@ -2,8 +2,6 @@
 
 package letsGoShopping;
 
-import java.util.ArrayList;
-
 public class Product {
 
 	private String item;
@@ -11,27 +9,27 @@ public class Product {
 	private String itemAlpha;
 	private int storeQuantity;
 	private double price;
+	private double lineTotal;
+	private int userQuantity;
 
-	public Product(String itemAlpha, String item, double price,int storeQuantity) {
+	public Product(String itemAlpha, String item, double price, int storeQuantity) {
 		setItemAlpha(itemAlpha);
 		setItem(item);
 		setPrice(price);
-        setStoreQuantity(storeQuantity);
+		setStoreQuantity(storeQuantity);
 	}
-	double lineTotal=0;
-	public double lineTotal(int input){
-		
-		if (input <=storeQuantity)
-			 lineTotal =price*input;
+
+	public double getLineTotal() {
+
+		if (userQuantity <= storeQuantity) {
+			lineTotal = (double) price * userQuantity;
+		} else {
+			System.out.println("Sorry, this was a popular item.  We only have " + storeQuantity + " remaining.");
+			lineTotal = 0;
+		}
 		return lineTotal;
 	}
-	
-	public double subTotal(){
-		double sum = 0;
-		sum = sum+lineTotal;
-		return sum;
-	}
-	
+
 	public String getItemAlpha() {
 		return itemAlpha;
 	}
@@ -72,4 +70,7 @@ public class Product {
 		this.price = price;
 	}
 
+	public void setUserQuantity(int userQuantity) {
+		this.userQuantity = userQuantity;
+	}
 }
