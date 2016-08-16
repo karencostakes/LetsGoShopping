@@ -89,7 +89,7 @@ public class Main {
 		String paymentInfo = scan1.nextLine();
 		if (paymentInfo.equalsIgnoreCase("cash")){
 			System.out.println("Please enter the amount you are paying : ");
-			double payment=scan1.nextInt();
+			double payment=scan1.nextDouble();
 			              scan1.nextLine();
 			   if (payment>grandTotal){
 				   double change = payment-grandTotal;
@@ -103,6 +103,22 @@ public class Main {
 				   System.out.println("Thank you for shopping. Please tell your java friends about us.");
 			   }
 		}
+		if(paymentInfo.equalsIgnoreCase("check")){
+			System.out.println("Please write a check for the amount of : "+ grandTotal + " Please enter your check number :");
+			long checkNumber =scan1.nextLong();
+			               scan1.nextLine();
+			System.out.println("Thank you for shopping. Please tell your java friends about us.");
+		}
+		if(paymentInfo.equalsIgnoreCase("credit card")){
+			System.out.print("Please enter your credit card number: ");
+			String ccNumber = scan1.nextLine();
+			System.out.print("Please enter your expiration date :(MM/YY)");
+			String expDate = scan1.nextLine();
+			System.out.print("Please enter the CVV:");
+			short cvvNumber = scan1.nextShort();
+			scan1.nextLine();
+			System.out.println("Thank you for shopping. Please tell your java friends about us.");
+		}                   
 
 	}
 
