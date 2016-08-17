@@ -147,8 +147,16 @@ public class Main {
 		}
 		System.out.println();
 		System.out.println("Here is your receipt...");
-		Receipt r = new Receipt(input, item, subTotal, grandTotal, paymentInfo);
+		System.out.println("Qty\t" + "Item\t" );
+		for(int i=0;i<itemPurchasedList.size();i++){
+			Product y =itemPurchasedList.get(i); 
+		Receipt r = new Receipt(input, y.getItem(),y.getLineTotal() );
 		r.printReceipt();
+		}
+		System.out.println("-----------------------------");
+		System.out.println("SubTotal: $"+ subTotal);
+		System.out.println("GrandTotal: $"+ grandTotal);
+		System.out.println("Payment Method:" + paymentInfo);
 		System.out.println();
 		System.out.println();
 		}

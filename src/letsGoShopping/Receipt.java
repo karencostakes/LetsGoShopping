@@ -7,19 +7,15 @@ public class Receipt {
 	private String paymentInfo;
 	private double subTotal;
 	private double grandTotal;
+	private double lineTotal;
 	
-	public Receipt(int userQuantity, String item, double subTotal, double grandTotal, String paymentInfo) {
-		super();
+	public Receipt(int userQuantity, String item, double lineTotal) {
 		this.item = item;
 		this.userQuantity = userQuantity;
-		this.paymentInfo = paymentInfo;
-		this.subTotal = subTotal;
-		this.grandTotal = grandTotal;
+		this.lineTotal = lineTotal;
 	}
 	public void printReceipt(){
-		System.out.println("Qty\t" + "Item\t" + "\t"+"\t"+"\t"+"Subtotal\t" +"\t"+ "Grand Total\t" +"\t"+ "Paid By");
-		System.out.println("===\t" + "====\t" + "\t"+"\t"+"\t"+ "========\t" + "\t"+"===========\t" +"\t"+ "=======");
-		System.out.println(userQuantity+"\t" + item+"\t" + "\t"+"$"+subTotal+"\t" +"\t"+"\t"+ "$"+grandTotal+"\t" + "\t"+"\t"+ paymentInfo);
+		System.out.println(userQuantity+"\t" + item+"\t" + lineTotal);
 	}
 	
 	
