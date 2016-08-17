@@ -17,9 +17,9 @@ public class Receipt {
 		this.grandTotal = grandTotal;
 	}
 	public void printReceipt(){
-		System.out.println("Qty\t" + "Item\t" + "\t"+"Subtotal\t" +"\t"+ "Grand Total\t" +"\t"+ "Paid By");
-		System.out.println("===\t" + "====\t" + "\t"+ "========\t" + "\t"+"===========\t" +"\t"+ "=======");
-		System.out.println(userQuantity+"\t" + item+"\t" + "$"+subTotal+"\t" +"\t"+ "$"+grandTotal+"\t" + "\t"+ paymentInfo);
+		System.out.println("Qty\t" + "Item\t" + "\t"+"\t"+"\t"+"Subtotal\t" +"\t"+ "Grand Total\t" +"\t"+ "Paid By");
+		System.out.println("===\t" + "====\t" + "\t"+"\t"+"\t"+ "========\t" + "\t"+"===========\t" +"\t"+ "=======");
+		System.out.println(userQuantity+"\t" + item+"\t" + "\t"+"$"+subTotal+"\t" +"\t"+"\t"+ "$"+grandTotal+"\t" + "\t"+"\t"+ paymentInfo);
 	}
 	
 	
