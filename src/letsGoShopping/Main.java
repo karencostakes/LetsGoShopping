@@ -70,14 +70,14 @@ public class Main {
 
 				}
 			}
-			System.out.print("How many " + item + " would you like?  ");
+			System.out.print("How many " + item + "s" +" would you like?  ");
 			input = scan1.nextInt();
 			scan1.nextLine();
 			p.setUserQuantity(input);
 			double lineTotal=p.getLineTotal();
       
 			System.out.println();
-			System.out.println("Here are the items in your Shopping Cart: \t"+ input+"\t"+ item+"\t"+"Subtotal: "+ lineTotal);
+			System.out.println("Here are the items in your Shopping Cart: \t"+ input+"\t"+ item+"\t"+"Subtotal:  $"+ lineTotal);
 	System.out.println();		
       System.out.print(
 					"Would you like to continue shopping or checkout? ('heck yes' or 'checkout')");
@@ -95,24 +95,24 @@ public class Main {
 
 		double subTotal = getSubTotal(itemPurchasedList);
 
-		System.out.println("Subtotal: \t"+"\t" + subTotal);
+		System.out.println("Subtotal: \t"+"\t" +"$"+ subTotal);
 
 		double salesTaxRate = .06;
 		double salesTaxAmount = salesTaxRate * subTotal;
 		double grandTotal = subTotal + salesTaxAmount;
-		System.out.println("Tax: \t" +"\t"+"\t"+ "  "+ salesTaxAmount);
-		System.out.println("Your Grand Total: \t" + grandTotal);
+		System.out.println("Tax: \t" +"\t"+"\t"+ "$"+ " "+ salesTaxAmount);
+		System.out.println("Your Grand Total: \t" + "$"+grandTotal);
 
 		System.out.println();
 		System.out.print("How would you like to pay? (Cash/check/credit card): ");
 		String paymentInfo = scan1.nextLine();
 		if (paymentInfo.equalsIgnoreCase("cash")) {
 			System.out.print("Please enter the amount you are paying: $");
-			System.out.println();
 			double payment = scan1.nextDouble();
 			scan1.nextLine();
 			if (payment > grandTotal) {
 				double change = payment - grandTotal;
+				System.out.println();
 				System.out.print("Thanks for your purchase! Here is your change: $" + change);
 			System.out.println();
 			} else if (payment < grandTotal) {
