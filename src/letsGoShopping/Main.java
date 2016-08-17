@@ -19,6 +19,8 @@ public class Main {
 		File myConfigFile = filePath.toFile();
 		ProductMenuTextFile pmt = new ProductMenuTextFile();
 		pmt.writeToFile(myConfigFile);
+		String openToBusiness="yes";
+		while(openToBusiness.equalsIgnoreCase("yes")){
 
 		System.out.println("Welcome to the Ultimate Java Collection!");
 		System.out.println(
@@ -121,6 +123,8 @@ public class Main {
 		System.out.println("Here is your receipt...");
 		Receipt r = new Receipt(input, item, subTotal, grandTotal, paymentInfo);
 		r.printReceipt();
+		System.out.println();
+		}
 	}
 
 	public static double getSubTotal(ArrayList<Product> itemPurchasedList) {
