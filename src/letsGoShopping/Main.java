@@ -60,7 +60,8 @@ public class Main {
 			input = scan1.nextInt();
 			scan1.nextLine();
 			p.setUserQuantity(input);
-			p.getLineTotal();
+			double lineTotal=p.getLineTotal();
+      System.out.println("Here the items in your Shopping Cart :"+ input+"\t"+ item+"\t"+"Sub Total: "+ lineTotal);
 			System.out.println(
 					"Would you like to continue shopping or checkout? (please enter 'heck yes' or 'checkout')");
 			choice = scan1.nextLine();
