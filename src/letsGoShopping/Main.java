@@ -74,10 +74,12 @@ public class Main {
 			input = scan1.nextInt();
 			scan1.nextLine();
 			p.setUserQuantity(input);
-			double lineTotal=p.getLineTotal();
+			System.out.println("Here are the items in your Shopping Cart: ");
+			for(int i=0;i<itemPurchasedList.size();i++){
+				Product x = itemPurchasedList.get(i);
+				System.out.println( input+"\t"+ x.getItem()+"\t"+"$"+ x.getLineTotal());	
+			}
       
-			System.out.println();
-			System.out.println("Here are the items in your Shopping Cart: \t"+ input+"\t"+ item+"\t"+"Subtotal:  $"+ lineTotal);
 	System.out.println();		
       System.out.print(
 					"Would you like to continue shopping or checkout? ('heck yes' or 'checkout')");
