@@ -56,7 +56,7 @@ public class ProductMenuTextFile {
 			writer.println("J." + "\t" + "Jannaspirin" + "\t" + "Murach's got you down?  Take 2 Jannaspirin to feel poised and peaceful" + "\t" + "$50");
 			writer.println("K."  + "\t" +  "Amerall" + "\t" + "\t" +  "Feeling unfocused?  Use Amerall to focus your energy and write spectacular to do lists" + "\t" + "$50");
 			writer.println("L." + "\t" +  "Abivan" + "\t" + "\t" +  "Dreaming of Method Monsters and Git Goblins?  Take an Abivan to eliminate your Janxiety" + "\t" +  "$50");
-			writer.println("M." + "\t" +  "Tomeka Tablets" + "\t" + "\t" + "Want to be funny?  Take 2 Tomeka Tablets and get ready for hilarity to ensue" + "\t" + "$50");
+			writer.println("M." + "\t" +  "Tommy Tablets" + "\t" + "\t" + "Want to be funny?  Take 2 Tomeka Tablets and get ready for hilarity to ensue" + "\t" + "$50");
 			writer.println ();
 			writer.println("Category: Accessories");
 			writer.println("N." + "\t" + "Kamel Constructor Cape" + "\t" +  "Wear your dashing cape to program the perfect constructors for your program" + "\t" +  "$50");
@@ -66,8 +66,8 @@ public class ProductMenuTextFile {
 			writer.println("R." + "\t" +   "Kristen Cap" + "\t" + "Wear this cap and you will morph into an open minded, feedback receiving machine" + "\t" +  "$50");
 			writer.println("S." + "\t" +   "Vonnita Vest" + "\t" + "Wear your vest to win over potential employers with sweetness and charm" + "\t" + "$50");
 			writer.println("T." + "\t" +  "Pocket Antonella" + "\t" + "Must have accessory.  Take Antonella with you anywhere you go" + "\t" + "$50");
-			writer.println("U." + "\t" + "Tracy Tophat" + "\t" + "Put on your snazzy topcoat if your teamwork need some light and laughter" + "\t" + "$50");
-			
+			writer.println("U." + "\t" + "Tracy Tophat" + "\t" + "Put on your snazzy top hat if your team needs some light and laughter" + "\t" + "$50");
+			writer.println ();
 			
 
 		} catch (FileNotFoundException e) {
