@@ -11,21 +11,17 @@ import java.util.Scanner;
 
 public class ProductMenuTextFile {
 
-	// testing push this file from eclipse
 	public static void readFile(File myConfigFile) {
 		try {
 			FileReader reader = new FileReader(myConfigFile);
 			BufferedReader bReader = new BufferedReader(reader);
 			String newLine = bReader.readLine();
-			// We can use these lines for many things (like reading from a
-			// database)
 			while (newLine != null) {
 				System.out.println(newLine);
 				newLine = bReader.readLine();
 			}
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -111,14 +107,13 @@ public class ProductMenuTextFile {
 			writer.println();
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 
 		} finally {
 			writer.close();
 		}
 	}
-
+	// keeping this code for future enhancements
 	/*
 	 * public static void writeToFileAppend(File myConfigFile) { FileWriter
 	 * writer = null;
