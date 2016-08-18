@@ -5,6 +5,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -58,8 +59,13 @@ public class Main {
 				pmt.readFile(myConfigFile);
 
 				System.out.print("Please enter the letter of the product you want to purchase: ");
-				String userSelection = scan1.nextLine();
-
+				String userSelection = "";
+				//still working on try/catch
+				try {
+					userSelection = scan1.nextLine();
+				} catch (InputMismatchException e) {
+					System.out.println("Please enter a letter only.");
+				}
 				for (int i = 0; i < itemList.size(); i++) {
 					if (userSelection.equalsIgnoreCase(itemList.get(i).getItemAlpha())) {
 						p = itemList.get(i);
