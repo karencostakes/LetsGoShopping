@@ -81,7 +81,7 @@ public class Main {
 				System.out.println("Here are the items in your Shopping Cart: ");
 				for (int i = 0; i < itemPurchasedList.size(); i++) {
 					Product x = itemPurchasedList.get(i);
-					System.out.println(input + "\t" + x.getItem() + "\t" + "$" + x.getLineTotal());
+					System.out.println(x.getUserQuantity() + "\t" + x.getItem() + "\t" + "$" + x.getLineTotal());
 				}
 
 				System.out.println();

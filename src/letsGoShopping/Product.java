@@ -12,6 +12,10 @@ public class Product {
 	private double lineTotal;
 	private int userQuantity;
 
+	public int getUserQuantity() {
+		return userQuantity;
+	}
+
 	public Product(String itemAlpha, String item, double price, int storeQuantity) {
 		setItemAlpha(itemAlpha);
 		setItem(item);
